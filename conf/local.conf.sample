@@ -331,3 +331,6 @@ IMAGE_FSTYPES_append = " mender_tezi"
 IMAGE_FSTYPES_remove = " teziimg"
 MENDER_STORAGE_DEVICE_colibri-imx7-emmc = "/dev/mmcblk0"
 MENDER_UBOOT_STORAGE_DEVICE_colibri-imx7-emmc = "0"
+
+PREFERRED_VERSION_pn-mender = "2.2.1"
+PACKAGECONFIG_pn-mender += " modules"

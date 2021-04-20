@@ -39,5 +39,4 @@ BBLAYERS ?= " \
   \
   ${TOPDIR}/../layers/meta-mender/meta-mender-core \
   ${TOPDIR}/../layers/meta-mender/meta-mender-toradex-nxp \
-  ${TOPDIR}/../layers/meta-mender/meta-mender-demo \
 "

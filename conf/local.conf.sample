@@ -318,3 +318,19 @@ IMAGE_INSTALL_append = " kernel-image kernel-devicetree"
 #
 # MENDER_SERVER_URL = "https://hosted.mender.io"
 # MENDER_TENANT_TOKEN = "<YOUR-HOSTED-MENDER-TENANT-TOKEN>"
+
+IMAGE_INSTALL_append = " mender-tezi-metadata"
+MACHINE_BOOT_FILES_remove_mender-grub = "boot.scr"
+
+# Use u-boot rather than u-boot-toradex for Grub integration
+PREFERRED_PROVIDER_u-boot_mender-grub = "u-boot"
+PREFERRED_PROVIDER_virtual/bootloader_mender-grub = "u-boot"
+
+IMAGE_CLASSES += "image_type_mender_tezi"
+IMAGE_FSTYPES_append = " mender_tezi"
+IMAGE_FSTYPES_remove = " teziimg"
+MENDER_STORAGE_DEVICE_colibri-imx7-emmc = "/dev/mmcblk0"
+MENDER_UBOOT_STORAGE_DEVICE_colibri-imx7-emmc = "0"
+
+PREFERRED_VERSION_pn-mender = "2.2.1"
+PACKAGECONFIG_pn-mender += " modules"

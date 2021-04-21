@@ -51,11 +51,11 @@ EOF
 bitbake console-tdx-image
 
 cd tmp-glibc/deploy/images/colibri-imx7-emmc
-mkdir torader_easy_install_dir
-cp mender-tezi-metadata/* torader_easy_install_dir/
-cp image-Console-Image.json torader_easy_install_dir/image.json
-cp Console-Image-colibri-imx7-emmc.sdimg.bz2 torader_easy_install_dir/
-cp u-boot.imx torader_easy_install_dir/
+mkdir toradex_easy_install_dir
+cp mender-tezi-metadata/* toradex_easy_install_dir/
+cp image-Console-Image.json toradex_easy_install_dir/image.json
+cp Console-Image-colibri-imx7-emmc.sdimg.bz2 toradex_easy_install_dir/
+cp u-boot.imx toradex_easy_install_dir/
 ```
 # Flashing the image via EasyInstall
 
